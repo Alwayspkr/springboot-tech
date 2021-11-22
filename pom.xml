@@ -69,7 +69,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		
+		<finalName>springboot-tech</finalName>
 	</build>
 
 </project>
