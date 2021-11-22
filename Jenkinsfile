@@ -1,11 +1,11 @@
-pipeline{
+pipeline {
      agent any
 
-     stages{
+     stages {
      stage ('compile Stage'){
 
          steps{
-         withMaven(maven:'3.8.1'){
+         withMaven(maven :'maven_3_8_1'){
          sh 'mvn clean compile'
          }
      }
@@ -13,14 +13,14 @@ pipeline{
         stage('Testing Stage'){
 
            steps{
-              withMaven(maven : '3.8.1'){
+              withMaven(maven :'maven_3_8_1'){
                   sh 'mvn test'
               }
-              }
+            }
         }
         stage ('Deployment Stage'){
            steps{
-              withMaven(maven: '3.8.1'){
+              withMaven(maven :'maven_3_8_1'){
                 sh 'mvn deploy'
            }
         }
